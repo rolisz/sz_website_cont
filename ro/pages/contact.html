@@ -14,18 +14,32 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://rolisz.github.io/szcont/ro/theme/css/bootstrap.readable.min.css" type="text/css"/>
-    <link href="http://rolisz.github.io/szcont/ro/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/ro/theme/css/bootstrap.readable.min.css" type="text/css"/>
+    <link href="/ro/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://rolisz.github.io/szcont/ro/theme/css/pygments/native.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://rolisz.github.io/szcont/ro/theme/css/style.css" type="text/css"/>
-        <link href="http://rolisz.github.io/szcont/ro/css/custom.css" rel="stylesheet">
+    <link href="/ro/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/ro/theme/css/style.css" type="text/css"/>
+        <link href="/ro/css/custom.css" rel="stylesheet">
 
+        <link href="/ro/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SzCont Consulting ATOM Feed"/>
 
 </head>
 <body>
-
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="top_bar">
+    <ul class="list-inline pull-right">
+            <li class="active">
+                <a href="/ro"><img src="/ro/images/ro.png"></a>
+            </li>
+            <li>
+                <a href="/en"><img src="/ro/images/en.png"></a>
+            </li>
+            <li>
+                <a href="/hu"><img src="/ro/images/hu.png"></a>
+            </li>
+    </ul>
+</div>
+<div class="navbar navbar-default" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -34,28 +48,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://rolisz.github.io/szcont/ro/" class="navbar-brand">
-SzCont Consulting            </a>
+            <a href="/ro/" class="navbar-brand">
+<img src="/ro/images/logo.png" width="200"/>             </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li><a href="http://rolisz.github.io/szcont/ro/pages/services.html">
+                         <li><a href="/ro/pages/services.html">
                              Servicii oferite de SzCont!
                           </a></li>
-                         <li class="active"><a href="http://rolisz.github.io/szcont/ro/pages/contact.html">
+                         <li class="active"><a href="/ro/pages/contact.html">
                              Suna acum pentru o super oferta!
                           </a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right list-inline">
-                    <li class="active">
-                        <a href="http://rolisz.github.io/szcont/ro"><img src="http://rolisz.github.io/szcont/ro/images/ro.png"></a>
-                    </li>
-                    <li>
-                        <a href="http://rolisz.github.io/szcont/en"><img src="http://rolisz.github.io/szcont/ro/images/en.png"></a>
-                    </li>
-                    <li>
-                        <a href="http://rolisz.github.io/szcont/hu"><img src="http://rolisz.github.io/szcont/ro/images/hu.png"></a>
-                    </li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -69,50 +72,73 @@ SzCont Consulting            </a>
         
 <section id="content" class="body">
     <h1 class="entry-title">Contact</h1>
-<address>
-  <strong>Twitter, Inc.</strong><br>
-  795 Folsom Ave, Suite 600<br>
-  San Francisco, CA 94107<br>
-  <abbr title="Phone">P:</abbr> (123) 456-7890
-</address>
+    <div class="row">
+        <div class="col-md-6">
+            <address>
+            <strong>Twitter, Inc.</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            San Francisco, CA 94107<br>
+            <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
 
-<address>
-  <strong>Full Name</strong><br>
-  <a href="mailto:#">first.last@example.com</a>
-</address>
+            <address>
+            <strong>Full Name</strong><br>
+            <a href="mailto:#">first.last@example.com</a>
+            </address>
 
-<address>
-  <strong>Sediul Social</strong>
-  Covasna
-</address>
+            <address>
+            <strong>Sediul Social</strong>
+            Covasna
+            </address>
 
-<form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=864f234a4eb0dd15a99d16a87cf53d80" method="post">
-  <div class="form-group">
-    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email">
+            <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=864f234a4eb0dd15a99d16a87cf53d80" method="post">
+            <div class="form-group">
+                <label for="inputName" class="col-sm-2 control-label">Name*</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" name="inputName" required placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email*</label>
+                <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" required placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="Telephone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSubject" class="col-sm-2 control-label">Subject*</label>
+                <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputSubject" name="inputPhone" placeholder="Subject">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mesaj" class="col-sm-2 control-label">Message*</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="3" name="mesaj" id="mesaj"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Trimite</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <iframe
+            width="600"
+            height="450"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBEdfDthMhB-XK438DyFLfLfNMJgGeSJNQ
+                &center=46.000164,26.1419892&zoom=15">
+            </iframe>
+        </div>
     </div>
-  </div>
-  <div class="form-group">
-    <label for="mesaj" class="col-sm-2 control-label">Mesaj</label>
-    <div class="col-sm-10">
-        <textarea class="form-control" rows="3" name="mesaj" id="mesaj"></textarea>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">Trimite</button>
-    </div>
-  </div>
-</form>
-
-<iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBEdfDthMhB-XK438DyFLfLfNMJgGeSJNQ
-    &center=46.000164,26.1419892&zoom=15">
-</iframe>
 </div>
         </div>
     </div>
@@ -129,13 +155,13 @@ SzCont Consulting            </a>
       </div>
    </div>
 </footer>
-<script src="http://rolisz.github.io/szcont/ro/theme/js/jquery.min.js"></script>
+<script src="/ro/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://rolisz.github.io/szcont/ro/theme/js/bootstrap.min.js"></script>
+<script src="/ro/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://rolisz.github.io/szcont/ro/theme/js/respond.min.js"></script>
+<script src="/ro/theme/js/respond.min.js"></script>
 
 </body>
 </html>

@@ -9,3 +9,29 @@
 .navbar-default {
     background-color: #671f35;
 }
+
+body {
+    padding-top: 0px;
+}
+
+.top_bar {
+    height: 30px;
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0px;
+        height: 86px;
+    }
+    .navbar-default .navbar-nav>li>a {
+        margin-top: 21px;
+        margin-bottom: 0;
+        font-size: 120%;
+    }
+}
+
+.navbar-brand {
+    margin-top: -2px;
+    padding: 0;
+}
