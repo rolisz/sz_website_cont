@@ -18,6 +18,9 @@ body {
     height: 30px;
     margin-top: 5px;
 }
+.top_bar ul {
+    margin-right: 25px;
+}
 
 @media (min-width: 768px) {
     .navbar {
@@ -34,4 +37,8 @@ body {
 .navbar-brand {
     margin-top: -2px;
     padding: 0;
+}
+
+.nav.navbar-nav.menu {
+    margin-right: -105px;
 }
