@@ -49,6 +49,7 @@ body {
     font-family: 'BenchNine', sans-serif;
     font-size: 170%;
     line-height: 1.7;
+    text-align:justify;
 }
 .menu li + li a:before {
     content: "|";
