@@ -1,6 +1,17 @@
-@import url(http://fonts.googleapis.com/css?family=BenchNine:300,400,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,latin-ext);
+.nav.navbar-nav.menu {
+    margin-right: -105px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 170%;
+    line-height: 1.7;
+    text-align:justify;
+}
 .navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
-    color: #a88790;
+    color: #fff;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-brand:hover, 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
@@ -35,25 +46,24 @@ body {
     }
 }
 
+@media (min-width: @screen-md-min) {
+    .container {
+        width: 900px;
+    }
+}
+
 .navbar-brand {
     margin-top: -2px;
     padding: 0;
 }
 
-.nav.navbar-nav.menu {
-    margin-right: -105px;
-    font-family: 'BenchNine', sans-serif;
-}
-
-body {
-    font-family: 'BenchNine', sans-serif;
-    font-size: 170%;
-    line-height: 1.7;
-    text-align:justify;
-}
 .menu li + li a:before {
     content: "|";
     margin-right: 30px;
+}
+
+.menu li + li a:hover:before {
+    color: #fff;
 }
 .menu.navbar-nav>li>a:hover {
     border: 1px solid transparent;
@@ -66,4 +76,13 @@ body {
 
 .entry-content a {
     border-bottom: 1px solid;
+}
+
+.navbar.affix {
+    width:100%;
+    top: 0;
+    z-index: 9999;
+}
+.navbar.affix + .container {
+    margin-top: 100px;
 }
