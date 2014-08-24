@@ -14,7 +14,6 @@ SITEURL = 'http://szcont.ro'
 RELATIVE_URLS = False
 
 DELETE_OUTPUT_DIRECTORY = True
-GOOGLE_ANALYTICS = "UA-54115236-1"
 
 # Following items are often useful when publishing
 
