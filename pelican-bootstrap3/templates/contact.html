@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Contact - {{ SITENAME }} {% endblock %}
+{% block content %}        
+<section id="content" class="body">
+    <h1 class="entry-title">Contact</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <address>
+            <strong>SZ-CONT CONSULTING SRL</strong><br>
+            CUI : RO 15809760<br>
+            Nr. RC: J14/373/2003<br>
+            Capital Social: 200 Lei<br>
+
+            <span class="glyphicon glyphicon-home"></span> 
+            Curtea 43, nr. 6B, ap. 2<br>
+            Târgu Secuiesc, jud. Covasna<br>
+            <span class="glyphicon glyphicon-earphone"></span> +4 0267 362 500
+            </address>
+
+            <address>
+            <strong><span class="glyphicon glyphicon-envelope"></span> Email</strong><br>
+            <a href="mailto:#">office [at] szcont.ro</a>
+            </address>
+
+            <form class="form-horizontal" action="http://getsimpleform.com/messages?form_api_token=1e014247b9eddb5e9fb604018a9aafd4" method="post">
+            <div class="form-group">
+                <label for="inputName" class="col-sm-2 control-label">Name*</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" name="inputName" required placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail" class="col-sm-2 control-label">Email*</label>
+                <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail" name="inputEmail" required placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+                <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputPhone" name="inputPhone" placeholder="Telephone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputSubject" class="col-sm-2 control-label">Subject*</label>
+                <div class="col-sm-10">
+                <input type="tel" class="form-control" id="inputSubject" name="inputPhone" placeholder="Subject">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mesaj" class="col-sm-2 control-label">Message*</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="10" name="mesaj" id="mesaj"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Trimite</button>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="col-sm-6">
+            <iframe width="600" height="450" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q=Curtea%2043%2C%20nr.%206%2C%20T%C3%A2rgu%20Secuiesc%2C%20jud.%20Covasna&key=AIzaSyBEdfDthMhB-XK438DyFLfLfNMJgGeSJNQ"></iframe>
+        </div>
+    </div>
+</div>
+{% endblock %}

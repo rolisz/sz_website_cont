@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} - {{ SITENAME }}{% endblock %}
+
+{% block breadcrumbs %}
+    {% if DISPLAY_BREADCRUMBS %}
+    <ol class="breadcrumb">
+        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+	  {% if page.url %}
+        <li class="active">{{ page.title }}</li>
+	  {% endif %}
+    </ol>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section id="content" class="body">
+        <h1 class="entry-title">{{ page.title }}</h1>
+        {% import 'includes/translations.html' as translations with context %}
+        {% if PDF_PROCESSOR %}
+            <a href="{{ SITEURL }}/pdf/{{ page.slug }}.pdf">
+                get the pdf
+            </a>
+        {% endif %}
+        {% set album, images = "About Us", page.gallery["about_us"] %}
+        <div class="pull-right col-sm-6 carousel_parent">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    {% for image in images %}
+                    <li data-target="#carousel-example-generic" data-slide-to="{{ loop.index0 }}"
+                        {% if loop.index == 1 %}class="active"{% endif %}></li>
+                    {% endfor %}
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    {% for image in images %}
+                        <div class="item{% if loop.index == 1 %} active {% endif %}">
+                            <a href="#" data-toggle="modal" data-target="#myModal" data-local="#carousel-example-generic"><img src="{{ SITEURL }}/images/gallery/{{album|lower|replace(" ", "_")}}/{{ image }}"></a>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+        <div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class='modal-body'>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="entry-content">
+            {{ page.content }}
+            {% if page.comments == 'enabled' %}
+                {% include 'includes/comments.html' %}
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

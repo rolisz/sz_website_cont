@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from os import getenv
 
 AUTHOR = u'Szab\xf3 Tibor'
-SITENAME = u'SzCont Consulting'
-SITEURL = getenv('SITE_URL', 'http://rolisz.github.io/szcont')
-print SITEURL
+SITENAME = u'SzCont'
+SITEURL = ''
 THEME = './pelican-bootstrap3'
 
 PATH = 'content'
@@ -26,7 +24,7 @@ FEED_RSS = None
 TAGS_SAVE_AS = ''
 TAG_SAVE_AS = ''
 
-DIRECT_TEMPLATES = ('index', 'contact')
+DIRECT_TEMPLATES = ('index', )
 
 # Blogroll
 LINKS = (('Pelican', 'http://getpelican.com/'),
@@ -35,7 +33,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 PLUGIN_PATHS = ["./pelican-plugins"]
-PLUGINS = ['i18n_subsites']
+PLUGINS = ['i18n_subsites', 'gallery']
 I18N_SUBSITES = {
     'ro': {
         'SITENAME': 'SzCont Consulting',
@@ -47,6 +45,10 @@ I18N_SUBSITES = {
         'SITENAME': 'SzCont Consulting',
     }
 }
+
+SITELOGO = 'images/logo.png'
+SITELOGO_SIZE = 200
+HIDE_SITENAME = True
 # Social widget
 SOCIAL = None
 HIDE_SIDEBAR = True

@@ -1,6 +1,8 @@
-Title: Services provided by SzCont!
+Title: Services provided
+Menulabel: services provided
 Lang: en
 Slug: services
+Order: 2
 
 <div class="panel-group" id="accordion">
   <div class="panel panel-default">

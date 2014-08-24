@@ -8,9 +8,9 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-FTP_HOST=localhost
-FTP_USER=anonymous
-FTP_TARGET_DIR=/
+FTP_HOST=szcont.ro
+FTP_USER=szcont
+FTP_TARGET_DIR=/public_html
 
 SSH_HOST=localhost
 SSH_PORT=22
@@ -95,7 +95,7 @@ dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
 
 ftp_upload: publish
-	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
+	lftp -u $(FTP_USER),$(FTP_PASS) -e "set ftp:ssl-allow off; mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit" $(FTP_HOST)
 
 s3_upload: publish
         s3cmd sync $(OUTPUTDIR)/ s3://$(S3_BUCKET) --acl-public --delete-removed --guess-mime-type

@@ -1,0 +1,20 @@
+<footer>
+   <div class="container">
+      <div class="row">
+         {% if articles %}
+            {% set copy_date = articles[0].date.strftime('%Y') %}
+         {% else %}
+            {% set copy_date = '' %}
+         {% endif %}
+         <div class="col-xs-12 text-center">&copy; {{ copy_date }} {{ AUTHOR }}
+            &middot; Firmă autorizată de CECCAR și CCF 
+            <br />
+            Capital social 200 lei, J14/373/2003, CUI 15809760
+            {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
+              {% from 'includes/cc-license.html' import cc_license_mark %}
+              <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
+            {% endif %}
+         </div>
+      </div>
+   </div>
+</footer>

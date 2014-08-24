@@ -1,6 +1,8 @@
-Title: Suna acum pentru o super oferta!
+Title: Contact
 Lang: ro
 Slug: contact
+Order: 3
 Template: contact
+Menulabel: contact
 
 Suna-ma Poate!
